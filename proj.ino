@@ -58,7 +58,7 @@ int sensor()
   if(sensorValue<500)
   a+=power(2,i);
 }
-if(a&&a<10)
+if(a)
 return a;
 else
 sensor();
@@ -73,15 +73,32 @@ display.setCursor(0,0);
 display.println("first Number:");
 display.display();
 num1 = sensor();
-delay(1000);
+display.clearDisplay();
+display.setTextSize(2);
+display.setTextColor(WHITE);
+display.setCursor(0,0);
 display.println(num1);
+display.display();
+delay(500);
 display.clearDisplay();
 display.setTextSize(2);
 display.setTextColor(WHITE);
 display.setCursor(0,0);
 display.println("Second Number:");
 num2=sensor();
+display.clearDisplay();
+display.setTextSize(2);
+display.setTextColor(WHITE);
+display.setCursor(0,0);
+display.println(num2);
+delay(1000);
+display.clearDisplay();
+display.setTextSize(2);
+display.setTextColor(WHITE);
+display.setCursor(0,0);
+display.println("Ans");
 display.println(num1+num2);
+display.display();
 delay(1000);
 
 }
